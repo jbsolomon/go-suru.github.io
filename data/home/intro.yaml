@@ -1,0 +1,19 @@
+sections:
+  - icon: 'fa-users'
+    title: 'Connect'
+    description: 'Join live Discussions and share Tasks around Topics.'
+
+  - icon: 'fa-git'
+    title: 'Collab'
+    description: 'Built around Git from the ground up.'
+
+  - icon: 'fa-sitemap'
+    title: 'Decentralize'
+    description: 'Host your own node, or join others.'
+
+buttons:
+  - link: 'https://gopkg.in/suru.v0'
+    text: 'Get Suru'
+
+  - link: 'https://github.com/go-suru/suru'
+    text: 'Get Started'
