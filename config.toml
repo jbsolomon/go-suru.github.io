@@ -1,0 +1,4 @@
+baseURL = "https://go-suru.github.io"
+languageCode = "en-us"
+title = "Suru"
+theme = "dopetrope"
