@@ -1,4 +1,4 @@
-baseURL = "https://go-suru.github.io"
+baseURL = "http://localhost:1313"
 languageCode = "en-us"
 title = "Suru"
 theme = "dopetrope"
