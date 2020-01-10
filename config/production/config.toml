@@ -1,4 +1,4 @@
-baseURL = "https://go-suru.github.io"
+baseURL = "https://go-suru.github.io/"
 
 [params.settings]
   googleanalytics = "UA-155988482-1"
