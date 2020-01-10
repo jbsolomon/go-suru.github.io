@@ -1,7 +1,4 @@
 baseURL = "https://go-suru.github.io"
-languageCode = "en-us"
-title = "Suru"
-theme = "dopetrope"
 
 [params.settings]
   googleanalytics = "UA-155988482-1"
