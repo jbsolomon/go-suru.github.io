@@ -9,11 +9,14 @@ sections:
 
   - icon: 'fa-sitemap'
     title: 'Decentralize'
-    description: 'Host your own node, or join others.'
+    description: 'Peer-to-peer networking, identity, and more.'
 
 buttons:
   - link: 'https://gopkg.in/suru.v0'
     text: 'Get Suru'
 
-  - link: 'https://github.com/go-suru/suru'
-    text: 'Get Started'
+#  - link: 'https://github.com/go-suru/suru'
+#    text: 'Get Started'
+
+  - link: 'doc/overview'
+    text: 'Design Overview'
