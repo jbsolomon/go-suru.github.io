@@ -5,3 +5,8 @@ theme = "dopetrope"
 [author]
   name = "Bodie Solomon"
   homepage = "https://github.com/jbsolomon"
+
+[params.doc]
+    title = "Docs"
+    foldername = "doc"
+    findoutmoretext = "Start Reading"
