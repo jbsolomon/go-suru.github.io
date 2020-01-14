@@ -16,12 +16,12 @@
 	<div id="page-wrapper">
 
 		
-			<div id="header-wrapper">
-				<div id="header">
+		<div id="header-wrapper">
+			<div id="header">
 
-					
+				
 <h1><a href="https://go-suru.github.io/">Suru (する)</a></h1>
-					
+				
 <nav id="nav">
     <ul>
         <li class="current"><a href="https://go-suru.github.io/">Home</a></li>
@@ -37,35 +37,83 @@
     </ul>
 </nav>
 
-				</div>
 			</div>
+		</div>
 
-						
-			<div id="main-wrapper">
-				<div class="container">
-
-					
-					
-<section id="blog">
-    <header class="major">
-        <h2></h2>
-    </header>
-    <div class="row">
+		
+		<div id="main-wrapper">
+			<div class="container">
+				
+				
+<article class="box post">
+    <a href="#" class="image featured"><img src="https://go-suru.github.io/images/suru-logo.png" alt="" /></a>
+    <header>
+        <h2>Overview</h2>
         
-    </div>
-</section>
+        <p>Posted 13 Jan 2020</p>
+        
+    </header>
+    <h1 id="suru-design-overview">Suru Design Overview</h1>
+<p>The design of Suru is focused on 3 main areas:</p>
+<ul>
+<li><a href="#connect">Connect</a></li>
+<li><a href="#collab">Collab</a></li>
+<li><a href="#decentralize">Decentralize</a></li>
+</ul>
+<p>This document covers each at a high level.</p>
+<h2 id="connect">Connect</h2>
+<p>Suru aims to make it easy to join others on a project and get things
+flowing.  If you don't think that's the case, please open a design issue
+at <a href="https://github.com/go-suru/suru/issues/new">Suru Issues</a> labeled
+&ldquo;design&rdquo;.  We ❤️ feedback.</p>
+<p>Suru can be used in three modes: private, org, and public.  In Private
+mode, nobody else can see your projects or talk to you, and Suru won't
+be online or communicate with other computers.</p>
+<p>In Org mode, Suru lets you discover and connect to other users who have
+invitations to your Suru org.  To invite others to your org, you'll need
+to send them a single-use invite link.</p>
+<p>In Public mode, you can publish your Suru project URL and anyone can
+join.  Public projects can be set up to allow read-only mode by users
+who aren't admins.</p>
+<h2 id="collab">Collab</h2>
+<p>Collab in Suru is focused on Topics.</p>
+<h2 id="decentralize">Decentralize</h2>
+<p>Suru is built from the ground up to be peer-to-peer, using
+<a href="https://libp2p.io">libp2p</a>.  All data, such as chat, Topic metadata,
+tasks, and so on, is transmitted directly between peers, over encrypted
+channels, and data stored for later use is also securely encrypted.</p>
+<p>Suru generates a unique cryptographic key pair for network identity and
+encryption.</p>
+<p>There are two main routes by which data is secured and transmitted: the
+peer registry and live channels.</p>
+<h3 id="peer-registry">Peer Registry</h3>
+<p>When a Suru node first wants to join a network, it looks up a mapping of
+peers in the network from a named registry service, either using a
+regular IP transport or Tor.</p>
+<p>The Tor method uses a bundled copy of Tor as a child process and
+configures it automatically to look up the registry on the given onion
+service.</p>
+<p>A user can optionally also connect directly to a peer if they know the
+peer's address, bypassing the registry.  Registries are meant to
+maintain a trustworthy list of reliable network nodes.</p>
+<p>Users can host their own registry services using Suru, or use publicly
+available registries.</p>
+<h3 id="live-channels">Live Channels</h3>
+<p>Once a Suru node joins a network, it hails its peers, publishing its ID
+and public key to nodes it is connected to, and discovering other live
+peers.  Suru nodes periodically notify one another of their aliveness,
+and propagate changes in the network to their connected peers.</p>
+<p>Suru nodes may also notify one another of changes in their Topics, Topic
+state, or other message queue states, such as chats.</p>
 
-					<footer>
-						<ul class="actions" style="text-align: center">
-							
-							
-						</ul>
-					</footer>
+</article>
 
-				</div>
+
+				
 			</div>
+		</div>
 
-			
+		
 <div id="footer-wrapper">
     <section id="footer" class="container">
         <div class="row">
@@ -176,8 +224,7 @@
 
 
 
-	
-		
+
 
     </body>
 </html>

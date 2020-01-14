@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Suru (する)</title>
-    <link>https://go-suru.github.io/</link>
-    <description>Recent content on Suru (する)</description>
+    <title>Docs on Suru (する)</title>
+    <link>https://go-suru.github.io/doc/</link>
+    <description>Recent content in Docs on Suru (する)</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 13 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://go-suru.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://go-suru.github.io/doc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
