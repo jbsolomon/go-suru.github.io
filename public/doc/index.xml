@@ -18,7 +18,7 @@
       
       <guid>https://go-suru.github.io/doc/overview/</guid>
       <description>Suru Design Overview The design of Suru is focused on 3 main areas:
- Connect Collab Decentralize  This document covers each at a high level.
+ Connect Collab Decentralize  This document covers each at a high level. See Implementation Status for current progress.
 Connect Suru aims to make it easy to join others on a project and get things flowing. If you don&#39;t think that&#39;s the case, please open a design issue at Suru Issues labeled &amp;ldquo;design&amp;rdquo;. We ❤️ feedback.
 Suru can be used in three modes: private, org, and public.</description>
     </item>
