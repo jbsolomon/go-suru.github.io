@@ -17,7 +17,13 @@ The design of Suru is focused on 3 main areas:
 - [Collab](#collab)
 - [Decentralize](#decentralize)
 
-This document covers each at a high level.
+This document covers each at a high level.  See
+[Implementation Status](#implementation-status) for current progress.
+
+[TODO]: # (or
+[install Suru](../getting-suru) and join the Suru pub channel on
+[Suru Core](suru-core).
+)
 
 ## Connect
 
@@ -40,7 +46,11 @@ who aren't admins.
 
 ## Collab
 
-Collab in Suru is focused on Topics.
+Collab in Suru is focused on Topics.  Within a Topic, peers can chat,
+create and discuss items in the Workshop, open Issues, create Schedule
+items, and view Worklogs.
+
+[TODO]: # (Make some screencasts of this working.)
 
 ## Decentralize
 
@@ -53,24 +63,24 @@ Suru generates a unique cryptographic key pair for network identity and
 encryption.
 
 There are two main routes by which data is secured and transmitted: the
-peer registry and live channels.
+Tracker and live channels.
 
-### Peer Registry
+### Peer Tracker
 
 When a Suru node first wants to join a network, it looks up a mapping of
-peers in the network from a named registry service, either using a
-regular IP transport or Tor.
+peers in the network from a named Tracker, either using a regular IP
+transport or Tor.
 
 The Tor method uses a bundled copy of Tor as a child process and
-configures it automatically to look up the registry on the given onion
+configures it automatically to look up the Tracker on the given onion
 service.
 
 A user can optionally also connect directly to a peer if they know the
-peer's address, bypassing the registry.  Registries are meant to
-maintain a trustworthy list of reliable network nodes.
+peer's address, bypassing the Tracker.  Trackers are meant to maintain a
+trustworthy list of reliable network nodes.
 
-Users can host their own registry services using Suru, or use publicly
-available registries.
+Users can host their own Trackers using Suru, or use publicly available
+Trackers.
 
 ### Live Channels
 
@@ -81,3 +91,42 @@ and propagate changes in the network to their connected peers.
 
 Suru nodes may also notify one another of changes in their Topics, Topic
 state, or other message queue states, such as chats.
+
+## Implementation Status
+
+### Fundamentals
+
+#### Command-line client
+
+- [ ] id
+- [ ] topic
+- [ ] live
+- [ ] serve
+- [ ] pub
+- [ ] sub
+
+### Connect
+
+- [ ] Generate ID keypair
+- [ ] Private mode
+- [ ] Org mode
+- [ ] Public mode
+
+### Collab
+
+- [ ] Chat
+- [ ] Profile
+- [ ] Workshop
+- [ ] Issues
+- [ ] Schedule
+- [ ] Worklog
+
+### Decentralize
+
+- [ ] Tracker (IP)
+- [ ] Tracker (Tor)
+- [ ] Tracker (Peer)
+- [ ] Locate peer
+- [ ] Connect to peer
+- [ ] Update peer
+- [ ] Forward peer update
