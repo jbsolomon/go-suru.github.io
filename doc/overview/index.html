@@ -60,7 +60,8 @@
 <li><a href="#collab">Collab</a></li>
 <li><a href="#decentralize">Decentralize</a></li>
 </ul>
-<p>This document covers each at a high level.</p>
+<p>This document covers each at a high level.  See
+<a href="#implementation-status">Implementation Status</a> for current progress.</p>
 <h2 id="connect">Connect</h2>
 <p>Suru aims to make it easy to join others on a project and get things
 flowing.  If you don't think that's the case, please open a design issue
@@ -76,7 +77,9 @@ to send them a single-use invite link.</p>
 join.  Public projects can be set up to allow read-only mode by users
 who aren't admins.</p>
 <h2 id="collab">Collab</h2>
-<p>Collab in Suru is focused on Topics.</p>
+<p>Collab in Suru is focused on Topics.  Within a Topic, peers can chat,
+create and discuss items in the Workshop, open Issues, create Schedule
+items, and view Worklogs.</p>
 <h2 id="decentralize">Decentralize</h2>
 <p>Suru is built from the ground up to be peer-to-peer, using
 <a href="https://libp2p.io">libp2p</a>.  All data, such as chat, Topic metadata,
@@ -85,19 +88,19 @@ channels, and data stored for later use is also securely encrypted.</p>
 <p>Suru generates a unique cryptographic key pair for network identity and
 encryption.</p>
 <p>There are two main routes by which data is secured and transmitted: the
-peer registry and live channels.</p>
-<h3 id="peer-registry">Peer Registry</h3>
+Tracker and live channels.</p>
+<h3 id="peer-tracker">Peer Tracker</h3>
 <p>When a Suru node first wants to join a network, it looks up a mapping of
-peers in the network from a named registry service, either using a
-regular IP transport or Tor.</p>
+peers in the network from a named Tracker, either using a regular IP
+transport or Tor.</p>
 <p>The Tor method uses a bundled copy of Tor as a child process and
-configures it automatically to look up the registry on the given onion
+configures it automatically to look up the Tracker on the given onion
 service.</p>
 <p>A user can optionally also connect directly to a peer if they know the
-peer's address, bypassing the registry.  Registries are meant to
-maintain a trustworthy list of reliable network nodes.</p>
-<p>Users can host their own registry services using Suru, or use publicly
-available registries.</p>
+peer's address, bypassing the Tracker.  Trackers are meant to maintain a
+trustworthy list of reliable network nodes.</p>
+<p>Users can host their own Trackers using Suru, or use publicly available
+Trackers.</p>
 <h3 id="live-channels">Live Channels</h3>
 <p>Once a Suru node joins a network, it hails its peers, publishing its ID
 and public key to nodes it is connected to, and discovering other live
@@ -105,6 +108,43 @@ peers.  Suru nodes periodically notify one another of their aliveness,
 and propagate changes in the network to their connected peers.</p>
 <p>Suru nodes may also notify one another of changes in their Topics, Topic
 state, or other message queue states, such as chats.</p>
+<h2 id="implementation-status">Implementation Status</h2>
+<h3 id="fundamentals">Fundamentals</h3>
+<h4 id="command-line-client">Command-line client</h4>
+<ul>
+<li><input disabled="" type="checkbox">id</li>
+<li><input disabled="" type="checkbox">topic</li>
+<li><input disabled="" type="checkbox">live</li>
+<li><input disabled="" type="checkbox">serve</li>
+<li><input disabled="" type="checkbox">pub</li>
+<li><input disabled="" type="checkbox">sub</li>
+</ul>
+<h3 id="connect-1">Connect</h3>
+<ul>
+<li><input disabled="" type="checkbox">Generate ID keypair</li>
+<li><input disabled="" type="checkbox">Private mode</li>
+<li><input disabled="" type="checkbox">Org mode</li>
+<li><input disabled="" type="checkbox">Public mode</li>
+</ul>
+<h3 id="collab-1">Collab</h3>
+<ul>
+<li><input disabled="" type="checkbox">Chat</li>
+<li><input disabled="" type="checkbox">Profile</li>
+<li><input disabled="" type="checkbox">Workshop</li>
+<li><input disabled="" type="checkbox">Issues</li>
+<li><input disabled="" type="checkbox">Schedule</li>
+<li><input disabled="" type="checkbox">Worklog</li>
+</ul>
+<h3 id="decentralize-1">Decentralize</h3>
+<ul>
+<li><input disabled="" type="checkbox">Tracker (IP)</li>
+<li><input disabled="" type="checkbox">Tracker (Tor)</li>
+<li><input disabled="" type="checkbox">Tracker (Peer)</li>
+<li><input disabled="" type="checkbox">Locate peer</li>
+<li><input disabled="" type="checkbox">Connect to peer</li>
+<li><input disabled="" type="checkbox">Update peer</li>
+<li><input disabled="" type="checkbox">Forward peer update</li>
+</ul>
 
 </article>
 
